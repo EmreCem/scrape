@@ -5,8 +5,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
-#setting up our webdriver for firefox
-path_to_firefoxdriver = 'C:/Users/20175159/Desktop/GeckoDriver/geckodriver.exe'
+import os
+#setting up our webdriver for firefox (must have geckodriver as an env variable called geckodriver)
+path_to_firefoxdriver = os.environ['geckodriver']
 browser = webdriver.Firefox(executable_path= path_to_firefoxdriver)
 #opening the friendlyhousing website in the browser
 url = 'https://friendlyhousing.nl/en/all-rentals'
